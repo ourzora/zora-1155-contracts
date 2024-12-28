@@ -375,7 +375,7 @@ export function getDataFromPremintReceipt(
   const premintedLog = getPremintedLogFromReceipt(receipt);
   return {
     tokenId: premintedLog?.tokenId,
-    collectionAddres: premintedLog?.contractAddress,
+    collectionAddress: premintedLog?.contractAddress,
     premintedLog,
     urls: makeUrls({
       address: premintedLog?.contractAddress,

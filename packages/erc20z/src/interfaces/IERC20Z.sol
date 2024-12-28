@@ -76,7 +76,7 @@ interface IERC20Z is IERC20Metadata {
     /// @notice Error when trying to swap ERC1155 to ERC20Z without the market being started.
     error SecondaryMarketHasNotYetStarted();
 
-    /// @notice Only supports recieving ERC1155 associated with ERC20Z NFTs.
+    /// @notice Only supports receiving ERC1155 associated with ERC20Z NFTs.
     error OnlySupportReceivingERC1155AssociatedZoraNFT();
 
     /// @notice Unauthorized to call this function

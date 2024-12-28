@@ -312,7 +312,7 @@ contract SponsoredSparksSpender is EIP712, ERC1155TransferRecipientConstants, IS
     ) external onlySparks returns (bytes4) {
         _onBatchReceived(from, ids, values, data);
 
-        // Validate recieving 1155 tokens in callback
+        // Validate receiving 1155 tokens in callback
         return ON_ERC1155_BATCH_RECEIVED_HASH;
     }
 

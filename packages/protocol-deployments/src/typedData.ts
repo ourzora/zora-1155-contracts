@@ -550,7 +550,11 @@ export const permitSparkCommentTypedDataDefinition = (
   };
 };
 
-// todo: explain
+/**
+ * Returns the minimum value required for a spark transaction (0.000001 ETH)
+ * This small amount is used to prevent spam and cover basic gas costs
+ * @returns The minimum spark value in wei (1e12 wei or 0.000001 ETH)
+ */
 export const sparkValue = () => parseEther("0.000001");
 
 /**
