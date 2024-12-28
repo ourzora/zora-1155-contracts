@@ -117,7 +117,7 @@
 
 - 898c84a7: [chore] Update dependencies and runtime scripts
 
-  This ensures jobs do not match binary names to make runs less ambigious and also that all deps are accounted for.
+  This ensures jobs do not match binary names to make runs less ambiguous and also that all deps are accounted for.
 
 - e0b5074d: Updated mainnet 1155 addresses and versions
 
@@ -276,7 +276,7 @@
 
 ### Patch Changes
 
-- 128b05c: Updated determinstic preminter deployment script to not fail if already deployed
+- 128b05c: Updated deterministic preminter deployment script to not fail if already deployed
 - 1d58cd1: Deployed 2.5.2 to zora sepolia and zora goerli
 - 128b05c: Deployed 2.5.1 to zora sepolia and zora goerli
 - Updated dependencies [e4edaac]

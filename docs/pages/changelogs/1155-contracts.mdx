@@ -61,7 +61,7 @@
 
 ### Minor Changes
 
-- [d460e79c](https://github.com/ourzora/zora-protocol/commit/d460e79c): - Introduced a `reduceSupply` function allowing an approved minter or admin to reduce the supply for a given token id. New supply must be less than the current maxSupply, and greater than or equal to the total minted so far.
+- [d460e79c](https://github.com/ourzora/zora-protocol/commit/d460e79c): - Introduced a `reduceSupply` function allowing an approved minter or admin to reduce the supply for a given token id. The new supply must be less than the current maxSupply, and greater than or equal to the total minted so far.
   - Removed the deprecated `mintWithRewards` function
 
 ## 2.10.1
@@ -254,7 +254,7 @@
 
   #### New ability to do premints against existing contracts
 
-  Executing premint against contracts not created via premint can be done with by passing a `premintCollection` argument to the new `premint` function:
+  Executing premint against contracts not created via premint can be done by passing a `premintCollection` argument to the new `premint` function:
 
   ```solidity
   function premint(
@@ -342,7 +342,7 @@
   - remove `ZoraCreator1155Impl.adminMintBatch` to save contract size
   - 50a4e09: - To support the MINTs contract passing the first minter as an argument to `premintV2WithSignerContract` - we add the field `firstMinter` to `premintV2WithSignerContract`, and then in the 1155 check that the firstMinter argument is not address(0) since it now can be passed in manually.
 
-### ZoraCreator1155Impl rewards splits are percentage based instead of a fixed value.
+### ZoraCreator1155Impl rewards splits are percentage-based instead of a fixed value.
 
 Prior to 2.9.0, rewards were distributed based on a fixed value in ETH per token minted. From 2.9.0 rewards are distributed based on a percentage of the total reward collected for a mint. The following table breaks down the reward splits for both free and paid mints before and after 2.9.0:
 
@@ -380,7 +380,7 @@ Prior to 2.9.0, rewards were distributed based on a fixed value in ETH per token
 
 ### Patch Changes
 
-- 52b16aa: Publishing package in format that supports commonjs imports by specifying exports.
+- 52b16aa: Publishing package in a format that supports commonjs imports by specifying exports.
 
 ## 2.7.2
 
@@ -400,7 +400,7 @@ Prior to 2.9.0, rewards were distributed based on a fixed value in ETH per token
 
 ### Minor Changes
 
-- e990b9d: Remove platform referral from RewardsSplits. Use new signature for 1155 for `mint` which takes an array of reward recipients.
+- e990b9d: Remove platform referral from RewardsSplits. Use a new signature for 1155 for `mint` which takes an array of reward recipients.
 
 ### Patch Changes
 
@@ -411,7 +411,7 @@ Prior to 2.9.0, rewards were distributed based on a fixed value in ETH per token
 
 ### Patch Changes
 
-- 7e00197: \* For premintV1 and V2 - mintReferrer has been changed to an array `mintRewardsRecipients` - which the first element in array is `mintReferral`, and second element is `platformReferral`. `platformReferral is not used by the premint contract yet`.
+- 7e00197: \* For premintV1 and V2 - mintReferrer has been changed to an array `mintRewardsRecipients` - which the first element in an array is `mintReferral`, and the second element is `platformReferral`. `platformReferral is not used by the premint contract yet`.
 
 ## 2.5.3
 
@@ -552,7 +552,7 @@ Prior to 2.9.0, rewards were distributed based on a fixed value in ETH per token
 
   ### Changes to `ZoraCreator1155PremintExecutorImpl`:
 
-  - new function `premintV1` - takes a `PremintConfig`, and premint v1 signature, and executes a premint, with added functionality of being able to specify mint referral and mint recipient
+  - new function `premintV1` - takes a `PremintConfig`, and premint v1 signature, and executes a premint, with the added functionality of being able to specify mint referral and mint recipient
   - new function `premintV2` - takes a `PremintConfigV2` signature and executes a premint, with being able to specify mint referral and mint recipient
   - deprecated function `premint` - call `premintV1` instead
   - new function

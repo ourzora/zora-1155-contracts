@@ -16,7 +16,7 @@ The ERC20z contract also allows users to wrap and unwrap tokens. Wrapping conver
 
 Royalties contract manages royalty distribution from secondary markets on Uniswap V3. Creators can earn LP liquidity rewards from the Uniswap pool and can collect royalties using the Royalties contract.
 
-## Deployment Determistic Addresses
+## Deployment Deterministic Addresses
 
 - Zora Timed Sale Strategy: 0x777777722D078c97c6ad07d9f36801e653E356Ae
 - Royalties: 0x77777771DF91C56c5468746E80DFA8b880f9719F

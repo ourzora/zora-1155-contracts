@@ -52,7 +52,7 @@
 
 - 898c84a7: [chore] Update dependencies and runtime scripts
 
-  This ensures jobs do not match binary names to make runs less ambigious and also that all deps are accounted for.
+  This ensures jobs do not match binary names to make runs less ambiguous and also that all deps are accounted for.
 
 - 2677c896: Add reduceSupply interface check to 1155
 
