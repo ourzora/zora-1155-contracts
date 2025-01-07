@@ -2,7 +2,7 @@
 
 The Zora Sale Timed Sale Strategy introduces a new fixed price and unlocks secondary sales on Uniswap V3. New tokens minted will have a fixed price of 0.000111 ETH (111 sparks).
 
-Upon calling setSale() a sale will be created for the 1155 NFT provided. In this function, it will also create an ERC20z token and a Uniswap V3 Pool. The ERC20z token will be used as a pool pair (WETH / ERC20z) as well as enable wrapping and unwrapping tokens from 1155 to ERC20z and vice versa.
+Upon calling setSale() a sale will be created for the 1155 NFT provided. In this function, it will also create an ERC20z token and an Uniswap V3 Pool. The ERC20z token will be used as a pool pair (WETH / ERC20z) as well as enable wrapping and unwrapping tokens from 1155 to ERC20z and vice versa.
 
 After the sale has ended launchMarket() will be called to launch the secondary market. This will deploy liquidity into the Uniswap V3 pool and enable buying and selling as a result.
 

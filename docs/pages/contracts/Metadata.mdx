@@ -31,7 +31,7 @@ Token metadata has the following json schema:
 
 Note that the `image` field should be a mime type starting with `image/`, however, for best rendering support use `png`, `jpg`, or `gif` images. Be aware larger file sizes may have issues rendering but also can display artifacts. It is recommended to test your images first on [testnet](https://testnet.zora.co/) networks and verify the thumbnails and media work.
 
-The `content` field supports _any_ mime type as the base of the NFT and is optional but for strong rendering support please ensure the `animation_url` field is set with an valid mime type (valid file types are: `gltf, glb, webm, mp3, mp4, m4v, ogv, and ogg along with mp3, wav, oga, and .html`).
+The `content` field supports _any_ mime type as the base of the NFT and is optional but for strong rendering support please ensure the `animation_url` field is set with a valid mime type (valid file types are: `gltf, glb, webm, mp3, mp4, m4v, ogv, and ogg along with mp3, wav, oga, and .html`).
 
 Contract and token metadata should be pinned to IPFS using a preferred pinning service,
 and the url when set on a contract or token should be in an ipfs url format, like: `ipfs://{cid}`.
