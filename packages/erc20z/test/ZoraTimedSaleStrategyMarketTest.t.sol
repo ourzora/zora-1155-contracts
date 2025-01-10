@@ -26,7 +26,7 @@ contract CollectorUniswapCallback {
     }
 
     receive() external payable {
-        console2.log("recieved eth ", msg.value);
+        console2.log("received eth ", msg.value);
     }
 }
 
