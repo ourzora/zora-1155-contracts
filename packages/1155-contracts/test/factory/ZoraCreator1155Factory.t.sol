@@ -142,7 +142,7 @@ contract ZoraCreator1155FactoryTest is Test {
         string calldata nameA,
         string calldata uri,
         address contractAdmin,
-        // this number will determine how transactions the factory makes before
+        // this number will determine how many transactions the factory makes before
         // creating the deterministic contract.  it should not affect the address
         uint16 numberOfCallsBeforeCreation
     ) external {
@@ -211,7 +211,7 @@ contract ZoraCreator1155FactoryTest is Test {
         string calldata nameA,
         string calldata uri,
         address contractAdmin,
-        // this number will determine how transactions the factory makes before
+        // this number will determine how many transactions the factory makes before
         // creating the deterministic contract.  it should not affect the address
         uint16 numberOfCallsBeforeCreation
     ) external {
@@ -245,7 +245,7 @@ contract ZoraCreator1155FactoryTest is Test {
         string calldata nameA,
         string calldata uri,
         address contractAdmin,
-        // this number will determine how transactions the factory makes before
+        // this number will determine how many transactions the factory makes before
         // creating the deterministic contract.  it should not affect the address
         uint16 numberOfCallsBeforeCreation
     ) external {
@@ -318,7 +318,7 @@ contract ZoraCreator1155FactoryTest is Test {
         assertEq(createdAddress, expectedContractAddress);
     }
 
-    function test_createContractDeterministic_createdContractcontractCanBeUpgraded() external {
+    function test_createContractDeterministic_createdContractCanBeUpgraded() external {
         string memory uri = "ipfs://asdfadsf";
         string memory nameA = "nameA";
         address contractAdmin = vm.addr(1);

@@ -93,7 +93,7 @@ abstract contract Ownable2StepUpgradeable is IOwnable2StepUpgradeable, IOwnable2
     }
 
     /// @notice Resign ownership of contract
-    /// @dev only callably by the owner, dangerous call.
+    /// @dev only callable by the owner, dangerous call.
     function resignOwnership() public onlyOwner {
         _transferOwnership(address(0));
     }
