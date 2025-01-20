@@ -74,6 +74,9 @@ contract FixedPriceAllowedMintersStrategy is Enjoy, SaleStrategy, LimitedMintPer
     /// @param tokenId The token id to set the sale config for
     /// @param salesConfig The sales config to set
     function setSale(uint256 tokenId, SalesConfig calldata salesConfig) external {
+        if (salesConfig.saleStart >= salesConfig.saleEnd) {
+            revert InvalidSaleTime();
+        }
         salesConfigs[msg.sender][tokenId] = salesConfig;
 
         emit SaleSet(msg.sender, tokenId, salesConfig);
@@ -157,7 +160,7 @@ contract FixedPriceAllowedMintersStrategy is Enjoy, SaleStrategy, LimitedMintPer
 
     /// @notice The version of the sale strategy
     function contractVersion() external pure override returns (string memory) {
-        return "1.0.0";
+        return "1.0.1";
     }
 
     function contractURI() external pure override returns (string memory) {

@@ -37,4 +37,5 @@ interface IFixedPriceAllowedMintersStrategy {
     event MinterSet(address indexed mediaContract, uint256 indexed tokenId, address indexed minter, bool allowed);
 
     error ONLY_MINTER();
+    error InvalidSaleTime();
 }
